@@ -1,0 +1,30 @@
+body {
+  font-family: 'Space Mono', monospace;
+	background: radial-gradient(circle, #C0A0D9, white);
+	display: flex;
+	justify-content: center;
+	text-align: center;
+}
+h1 {
+  font-family: 'Bungee Shade', cursive;
+	font-size: 3em;
+	margin: 6% 0%;
+}
+
+.links {
+  display: flex;
+  justify-content: space-around;
+  padding-bottom: 8%;
+}
+
+a {
+  text-decoration: none;
+  font-size: 1.5em;
+  color: #A64CED;
+}
+a:hover {
+  color: #7311BF;
+}
+img {
+  border: 2px solid white;
+}
