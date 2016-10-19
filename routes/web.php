@@ -18,4 +18,8 @@ Route::get('/', function(){
  });
  /*Route::get('/IpsumController@index')->name('ipsum.index');*/
 
- Route::resource('lorem-generator', 'LoremController');
+#Lorem Ipsum Generator
+Route::get('/lorem-ipsum', 'IpsumController@index')->name(''); #review names?
+
+#Random User Generator
+Route::get('/random-user', 'RandomUserController@index')->name('');#review names?
