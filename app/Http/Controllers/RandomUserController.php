@@ -33,7 +33,7 @@ class RandomUserController extends Controller
      */
     public function create()
     {
-        //
+        return view('random-user');
     }
 
     /**
@@ -44,7 +44,19 @@ class RandomUserController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        #validate
+        $this->validate($request, [
+          'user'=>'required',
+          'length'=>'required|min:5',
+        ]);
+        #put title submitted via form into variable "title"
+        $uAmount= $request->input('user');
+        $uLength= $request->input('length');
+
+        #code to generate user's random User
+
+        #view results
+        //return $uAmount;
     }
 
     /**

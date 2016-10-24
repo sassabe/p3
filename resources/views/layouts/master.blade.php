@@ -14,9 +14,20 @@
     </title>
   </head>
   <body>
-    <section>
+    <section class="menu">
+        <nav>
+          <ul>
+            <li><a href="http://p1.sassabe.me">Sassabe's Portfolio |</a></li>
+            <li><a href="http://p2.sassabe.me">P2 |</a></li>
+            <li><a href="http://p3.sassabe.me">P3 |</a></li>
+            <li><a href="">P4</a></li>
+          </ul>
+        </nav>
+      @yield('navigation')
+    </section>
+    <section ="main">
       @yield('content')
     </section>
-    
+
   </body>
 </html>

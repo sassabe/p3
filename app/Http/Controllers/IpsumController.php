@@ -29,7 +29,7 @@ class IpsumController extends Controller
      */
     public function create()
     {
-        //
+        return view('lorem-ipsum');
     }
 
     /**
@@ -39,8 +39,19 @@ class IpsumController extends Controller
      * @return \Illuminate\Http\Response
      */
     public function store(Request $request)
-    {
-        //
+        {
+            #validate
+            $this->validate($request, [
+              'lAmount'=>'required',
+            ]);
+            #put title submitted via form into variable "title"
+            $lAmount= $request->input('lAmount');
+
+            #code to generate user's random User
+
+            #view results
+            return $lAmount;
+
     }
 
     /**
