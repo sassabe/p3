@@ -46,7 +46,7 @@ class RandomUserController extends Controller
     {
         #validate
         $this->validate($request, [
-          'users'=>'required',
+          'users'=>'required|numeric|min:1|max:7',
         ]);
         #put title submitted via form into variable "title"
         $uAmount= $request->input('users');

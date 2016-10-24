@@ -42,7 +42,7 @@ class IpsumController extends Controller
         {
             #validate
             $this->validate($request, [
-              'number'=>'required',
+              'number'=>'required|numeric|min:1|max:7',
             ]);
             #put title submitted via form into variable "title"
             $lAmount= $request->input('number');
