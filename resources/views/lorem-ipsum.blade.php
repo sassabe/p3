@@ -12,7 +12,7 @@
 <h4>Specifiy how many paragraphs of lorem ipsum text you want.</h4>
 <form method='POST' action='/lorem-ipsum'>
     {{ csrf_field() }}
-    Number of paragraphs? <input type='number' name='lAmount' value='{{old("lAmount")}}'>
+    Number of paragraphs? <input type='text' name='number' maxlength="2" value='{{old("number")}}'>
     <button type='submit' value='Create text!'>Create text!</button>
     @if(count($errors) > 0)
     <ul class="error">
@@ -20,7 +20,11 @@
             <li class="error">{{ $error }}</li>
         @endforeach
     </ul>
-@endif
+    @endif
 </form>
-
+@if(Session::has('text'))
+<section class="text">
+{!|Session::get('text')}}
+</section>
+@endif
 @endsection

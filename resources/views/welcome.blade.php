@@ -9,7 +9,7 @@
                 <h4>Two helpful tools for web developers to get placeholder text (lorem ipsum) or create random users.</h4>
 
                 <div class="links">
-                    <a href="/lorem-generator">Lorem Ipsum Generator</a>
+                    <a href="/lorem-ipsum">Lorem Ipsum Generator</a>
                     <a href="/random-user">Random User Generator</a>
                 </div>
                 <div class="image">

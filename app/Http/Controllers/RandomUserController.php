@@ -46,10 +46,10 @@ class RandomUserController extends Controller
     {
         #validate
         $this->validate($request, [
-          'user'=>'required',
+          'users'=>'required',
         ]);
         #put title submitted via form into variable "title"
-        $uAmount= $request->input('user');
+        $uAmount= $request->input('users');
 
         #code to generate user's random User
 
@@ -57,16 +57,7 @@ class RandomUserController extends Controller
         //return $uAmount;
     }
 
-    /**
-     * Display the specified resource.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
-    public function show($id)
-    {
-        //
-    }
+
 
     /**
      * Show the form for editing the specified resource.

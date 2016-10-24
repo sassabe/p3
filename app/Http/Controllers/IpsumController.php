@@ -42,28 +42,23 @@ class IpsumController extends Controller
         {
             #validate
             $this->validate($request, [
-              'lAmount'=>'required',
+              'number'=>'required',
             ]);
             #put title submitted via form into variable "title"
-            $lAmount= $request->input('lAmount');
+            $lAmount= $request->input('number');
 
-            #code to generate user's random User
+            #code to generate lorem ipsum
+            $generator = new \Badcow\LoremIpsum\Generator();
+            $paragraphs = $generator->getParagraphs($request->input('number'));
+            $text = implode('<p>', $paragraphs);
 
             #view results
-            return $lAmount;
+
+            return view('lorem-ipsum', ['text' => $text]);
 
     }
 
-    /**
-     * Display the specified resource.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
-    public function show($id)
-    {
-        //
-    }
+
 
     /**
      * Show the form for editing the specified resource.
