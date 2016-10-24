@@ -39,7 +39,7 @@ h1 {
 	margin: 4% 0%;
 }
 h1, h4 {
-  text-align: center;
+  text-align: center; padding-left: 10%; padding-right: 10%;
 }
 .links {
   display: flex;

@@ -6,7 +6,7 @@
 @section('content')
             <div class="content">
                 <h1>Developer's Best Friend</h1>
-                <h4>Two helpful tools for web developers</h4>
+                <h4>Two helpful tools for web developers to get placeholder text (lorem ipsum) or create random users.</h4>
 
                 <div class="links">
                     <a href="/lorem-generator">Lorem Ipsum Generator</a>

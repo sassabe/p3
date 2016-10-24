@@ -9,6 +9,7 @@
 
 @section('content')
 <h1>Lorem Ipsum Generator</h1>
+<h4>Specifiy how many paragraphs of lorem ipsum text you want.</h4>
 <form method='POST' action='/lorem-ipsum'>
     {{ csrf_field() }}
     Number of paragraphs? <input type='number' name='lAmount' value='{{old("lAmount")}}'>
