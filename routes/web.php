@@ -18,9 +18,9 @@ Route::get('/', function(){
  /*Route::get('/IpsumController@index')->name('ipsum.index');*/
 
 #Lorem Ipsum Generator
-Route::get('/lorem-ipsum', 'IpsumController@create')->name('lorem-ipsum.create'); #review names?
-Route::post('/lorem-ipsum', 'IpsumController@store')->name('lorem-ipsum.store');
+Route::get('/lorem-ipsum/create', 'IpsumController@create')->name('lorem-ipsum.create'); #review names?
+Route::post('/lorem-ipsum/store', 'IpsumController@store')->name('lorem-ipsum.store');
 
 #Random User Generator
-Route::get('/random-user', 'RandomUserController@create')->name('');#review names?
-Route::post('/random-user', 'RandomUserController@show')->name('');
+Route::get('/random-user/create', 'RandomUserController@create')->name('random-user.create');#review names?
+Route::post('/random-user/store', 'RandomUserController@store')->name('random-user.store');

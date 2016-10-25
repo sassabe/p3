@@ -10,7 +10,7 @@
 @section('content')
 <h1>Lorem Ipsum Generator</h1>
 <h4>Specifiy how many paragraphs of lorem ipsum text you want.</h4>
-<form method='POST' action='/lorem-ipsum'>
+<form method='POST' action='/lorem-ipsum/store'>
     {{ csrf_field() }}
     Number of paragraphs? <input type='text' name='number' maxlength="2" value='{{old("number")}}'>
     <button type='submit' value='Create text!'>Create text!</button>
@@ -22,9 +22,5 @@
     </ul>
     @endif
 </form>
-@if(Session::has('text'))
-<section class="text">
-{!|Session::get('text')}}
-</section>
-@endif
+
 @endsection

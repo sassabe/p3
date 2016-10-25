@@ -29,7 +29,7 @@ class IpsumController extends Controller
      */
     public function create()
     {
-        return view('lorem-ipsum');
+        return view('lorem-ipsum.create');
     }
 
     /**
@@ -54,7 +54,7 @@ class IpsumController extends Controller
 
             #view results
 
-            return view('lorem-ipsum', ['text' => $text]);
+            return view('lorem-ipsum.store', ['text' => $text]);
 
     }
 

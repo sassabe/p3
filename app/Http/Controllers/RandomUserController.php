@@ -33,7 +33,7 @@ class RandomUserController extends Controller
      */
     public function create()
     {
-        return view('random-user');
+        return view('random-user.create');
     }
 
     /**
@@ -51,9 +51,12 @@ class RandomUserController extends Controller
         #put title submitted via form into variable "title"
         $uAmount= $request->input('users');
 
-        #code to generate user's random User
-
+        #code to generate random User
+        $gen = new \RandomUser\Generator();
+        $user = $gen->getUser($request->input('users'));
+        $text = implode('<p>', $user);
         #view results
+        return view('random-user.store', ['text' => $text]);
         //return $uAmount;
     }
 
