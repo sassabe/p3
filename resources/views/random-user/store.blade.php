@@ -10,7 +10,8 @@
 
 @section('content')
 <h1>Random User Generator</h1>
-     {{ $text }}
 
-    <p><a href='/random-user/create'>Get more random users!</a></p>
+    <section class="user-output"> <code> {{ $output }} </code> </section>
+
+    <p class="more-text"><a href='/random-user/create'>Get more random users!</a></p>
 @endsection

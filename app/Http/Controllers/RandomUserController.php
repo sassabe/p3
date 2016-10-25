@@ -16,15 +16,6 @@ use p3\Http\Requests;
 
 class RandomUserController extends Controller
 {
-    /**
-     * Display a listing of the resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
-    public function index()
-    {
-        //
-    }
 
     /**
      * Show the form for creating a new resource.
@@ -46,53 +37,29 @@ class RandomUserController extends Controller
     {
         #validate
         $this->validate($request, [
-          'users'=>'required|numeric|min:1|max:7',
+          'uAmount'=>'required|numeric|min:1|max:99',
         ]);
         #put title submitted via form into variable "title"
-        $uAmount= $request->input('users');
+        $uAmount= $request->input('uAmount');
 
         #code to generate random User
         $gen = new \RandomUser\Generator();
-        $user = $gen->getUser($request->input('users'));
-        $text = implode('<p>', $user);
+        $users = $gen->getUsers($uAmount);
+        $userArray = array();
+        foreach($users as $user) {
+            array_push($userArray, '<ul class="userOutput">');
+            array_push($userArray, '<li>Name: '.$user->getFirstName().' '.$user->getLastName().'</li>');
+            array_push($userArray, '<li>Email: '.$user->getEmail().'</li>');
+            array_push($userArray, '<li>Username: '.$user->getUsername().'</li>');
+            array_push($userArray, '<li>Password: '.$user->getPassword().'</li>');
+            array_push($userArray, '</ul>');
+        }
+        $output = implode("", $userArray);
+
+
+       #?
         #view results
-        return view('random-user.store', ['text' => $text]);
-        //return $uAmount;
+        return view('random-user.store', ['output' => $output]);
+
     }
-
-
-
-    /**
-     * Show the form for editing the specified resource.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
-    public function edit($id)
-    {
-        //
-    }
-
-    /**
-     * Update the specified resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
-    public function update(Request $request, $id)
-    {
-        //
-    }
-
-    /**
-     * Remove the specified resource from storage.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
-    public function destroy($id)
-    {
-        //
-    }
-}
+  }

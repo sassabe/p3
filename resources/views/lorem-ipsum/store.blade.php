@@ -10,7 +10,7 @@
 
 @section('content')
 <h1>Lorem Ipsum Generator</h1>
-     {{ $text }}
+    <div class ="lorem-output"> <code> {{ $text }} </code> </div>
 
-    <p><a href='/lorem-ipsum/create'>Get more random text!</a></p>
+    <p class="more-text"><a href='/lorem-ipsum/create'>Get more random text!</a></p>
 @endsection

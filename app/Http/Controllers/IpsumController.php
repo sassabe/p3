@@ -49,48 +49,14 @@ class IpsumController extends Controller
 
             #code to generate lorem ipsum
             $generator = new \Badcow\LoremIpsum\Generator();
-            $paragraphs = $generator->getParagraphs($request->input('number'));
-            $text = implode('<p>', $paragraphs);
+            $paragraphs = $generator->getParagraphs($lAmount);
+            $text = '&lt;p&gt;';
+            $text .= implode('&lt;/p&gt;&lt;p&gt;', $paragraphs);
+            $text .= '&lt;/p&gt;';
 
             #view results
 
             return view('lorem-ipsum.store', ['text' => $text]);
 
-    }
-
-
-
-    /**
-     * Show the form for editing the specified resource.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
-    public function edit($id)
-    {
-        //
-    }
-
-    /**
-     * Update the specified resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
-    public function update(Request $request, $id)
-    {
-        //
-    }
-
-    /**
-     * Remove the specified resource from storage.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
-    public function destroy($id)
-    {
-        //
     }
 }
