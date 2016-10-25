@@ -50,9 +50,9 @@ class IpsumController extends Controller
             #code to generate lorem ipsum
             $generator = new \Badcow\LoremIpsum\Generator();
             $paragraphs = $generator->getParagraphs($lAmount);
-            $text = '&lt;p&gt;';
-            $text .= implode('&lt;/p&gt;&lt;p&gt;', $paragraphs);
-            $text .= '&lt;/p&gt;';
+            $text = '<p>';
+            $text .= implode('<p></p>', $paragraphs);
+            $text .= '</p>';
 
             #view results
 

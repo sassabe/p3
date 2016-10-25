@@ -85,12 +85,19 @@ ul .error {
   color: red;
   list-style: none;
 }
-.lorem-output, .user-output {
-  margin: 0 12%; padding: 3%; border: 3px solid #A64CED;
+.output, .user-output{
+  font-family: 'Verdana', sans-serif;
+}
+.output {
+  border: 3px solid #A64CED;
+  padding: 3%; margin: 0 12%;
+}
+.user-output {
+  background-color: #fff;
+  margin: 0 20%; padding: 2%;
+
+
 }
 .more-text {
   text-align: center;
-}
-.user-output ul {
-  list-style: none;
 }

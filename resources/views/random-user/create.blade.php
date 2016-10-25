@@ -10,7 +10,7 @@
 @section('content')
 <h1>Random User Generator</h1>
 <h4>Specify how many users you want. This tool will generate a list of random names, accompanied by email, username and password.</h4>
-<form method='POST' action='/random-user/store' id="user-form">
+<form method='POST' action='/random-user/store'>
     {{ csrf_field() }}
     <div class="field-row">How many users? <input type='text' name='uAmount' maxlength="2" value='{{old("uAmount")}}'></div>
     <button type='submit' value='Get users!'>Get users!</button>

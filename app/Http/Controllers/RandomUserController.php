@@ -47,7 +47,7 @@ class RandomUserController extends Controller
         $users = $gen->getUsers($uAmount);
         $userArray = array();
         foreach($users as $user) {
-            array_push($userArray, '<ul class="userOutput">');
+            array_push($userArray, '<ul class="user-output">');
             array_push($userArray, '<li>Name: '.$user->getFirstName().' '.$user->getLastName().'</li>');
             array_push($userArray, '<li>Email: '.$user->getEmail().'</li>');
             array_push($userArray, '<li>Username: '.$user->getUsername().'</li>');
