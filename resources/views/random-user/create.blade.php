@@ -1,7 +1,7 @@
 @extends('layouts.master')
 
 @section('title')
-'Random User'
+Random User
 @endsection
 
 @section('navigation')

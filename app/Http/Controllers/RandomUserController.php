@@ -48,10 +48,10 @@ class RandomUserController extends Controller
         $userArray = array();
         foreach($users as $user) {
             array_push($userArray, '<ul class="user-output">');
-            array_push($userArray, '<li>Name: '.$user->getFirstName().' '.$user->getLastName().'</li>');
-            array_push($userArray, '<li>Email: '.$user->getEmail().'</li>');
-            array_push($userArray, '<li>Username: '.$user->getUsername().'</li>');
-            array_push($userArray, '<li>Password: '.$user->getPassword().'</li>');
+            array_push($userArray, '<li><strong>Name: </strong>'.$user->getFirstName().' '.$user->getLastName().'</li>');
+            array_push($userArray, '<li><strong>Email: </strong>'.$user->getEmail().'</li>');
+            array_push($userArray, '<li><strong>Username: </strong>'.$user->getUsername().'</li>');
+            array_push($userArray, '<li><strong>Password: </strong>'.$user->getPassword().'</li>');
             array_push($userArray, '</ul>');
         }
         $output = implode("", $userArray);

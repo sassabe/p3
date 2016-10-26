@@ -93,11 +93,11 @@ ul .error {
   padding: 3%; margin: 0 12%;
 }
 .user-output {
-  background-color: #fff;
+  background-color: #F3EBFA;
   margin: 0 20%; padding: 2%;
-
-
+  list-style: none;
 }
+
 .more-text {
   text-align: center;
 }

@@ -1,7 +1,7 @@
 @extends('layouts.master')
 
 @section('title')
-  'Lorem Ipsum'
+  Lorem Ipsum
 @endsection
 
 @section('navigation')

@@ -12,6 +12,7 @@
     <title>
       @yield('title','p3')
     </title>
+    <link rel="icon" type="image/jpeg" href="{{ asset('/images/favicon.jpg') }}" >
   </head>
   <body>
     <section class="menu">
