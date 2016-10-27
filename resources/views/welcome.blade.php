@@ -13,7 +13,7 @@
                     <a href="/random-user/create">Random User Generator</a>
                 </div>
                 <div class="image">
-                  <img src="images/bestfriend.jpg">
+                  <img src="images/bestfriend.jpg" alt="dog">
                 </div>
             </div>
 @endsection

@@ -26,7 +26,7 @@
         </nav>
       @yield('navigation')
     </section>
-    <section ="main">
+    <section>
       @yield('content')
     </section>
 
